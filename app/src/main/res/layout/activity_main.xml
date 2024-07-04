@@ -7,14 +7,45 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        app:title="Milk-Man"
-        app:titleTextColor="@color/white">
+        android:background="?attr/colorPrimary">
 
-    </androidx.appcompat.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/colorPrimary"
+                app:title="Milk-Man"
+                app:titleTextColor="@color/white">
+            </androidx.appcompat.widget.Toolbar>
+
+            <TextView
+                android:id="@+id/txtAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="20sp"
+                android:text="Amount"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic"
+                android:textSize="20sp">
+            </TextView>
+
+        </LinearLayout>
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabMain"
